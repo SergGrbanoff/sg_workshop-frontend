@@ -1,0 +1,20 @@
+{
+  "name": "sg_workshop-frontend",
+  "description": "gulp_pug_sass_bem_boilerplate",
+  "main": "index.js",
+  "authors": [
+    "Serg Grbanoff"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "jqurey#^3.2.1"
+  }
+}

@@ -1,0 +1,19 @@
+//****************************************************
+//		МИКСИН ДЛЯ ПОДКЛЮЧЕНИЯ РАЗНЫХ ФОРМАТОВ ШРИФТОВ
+//****************************************************
+
+@mixin fontFace($family,$src,$style: normal,$weight: normal) 
+	@font-face 
+		font-family: $family
+		src: url('#{$src}.eot') // IE9 compat
+		src: url('#{$src}.eot?#iefix') format('embedded-opentype'), url('#{$src}.woff') format('woff'),	url('#{$src}.woff2') format('woff2'), url('#{$src}.ttf') format('truetype') 
+		
+		font-style: $style
+		font-weight: $weight // 100-Thin 200-Extra Light 300-Light 400-Normal 500-Medium 600-Semi Bold 700-Bold 800-Extra Bold 900-Black 
+
+//*********************************************
+//		ПОДКЛЮЧАЕМ ФАЙЛЫ ШРИФТОВ
+//*********************************************
+
+@include fontFace('Roboto','../fonts/RobotoRegular/roboto-regular', Regular, 400)
+@include fontFace('Roboto','../fonts/RobotoBold/roboto-bold', Bold, 700)

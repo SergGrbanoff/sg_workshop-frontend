@@ -1,0 +1,50 @@
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+
+include +head/head
+include +header/header
+
+doctype html
+<!--[if lt IE 7]>      
+<html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7">
+<![endif]-->
+<!--[if IE 7]> 
+<html lang="en" class="no-js lt-ie9 lt-ie8">
+<![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="no-js lt-ie9">
+<![endif]-->
+<!--[if gt IE 8]><!--> 
+<html lang="ru-RU">
+<!--<![endif]-->
+html(lang="ru-RU")
+
+	block head
+		head
+			+head({
+				"title": "sg_workshop-fronend",
+				"author": "Serg Grbanoff",
+				"description": "start frontend template master"
+			})
+			
+		+b.BODY.page
+			+e.DIV.wrap
+			
+				block header
+					header header
+					
+				block content
+					div content
+
+				block footer
+					footer footer
+				
+			block vendors
+				// build:js js/vendor.js
+				script( src="libs/jquery/jquery.min.js")
+				// endbuild
+
+			block scripts
+				// build:js js/main.js
+				script( src="js/main.js")
+				// endbuild
